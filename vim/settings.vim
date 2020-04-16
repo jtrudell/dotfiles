@@ -13,3 +13,15 @@ for fpath in split(globpath(vimsettings, '*.vim'), '\n')
 
   exe 'source' fpath
 endfor
+
+" JEN ADDITIONS
+
+" show dotfiles
+let NERDTreeShowHidden=1
+
+" yank to mac clipboard
+set clipboard=unnamed
+
+" stop exiting vim when running a command with !
+" I have no idea why this works
+autocmd vimenter * let &shell='/bin/zsh -i'
